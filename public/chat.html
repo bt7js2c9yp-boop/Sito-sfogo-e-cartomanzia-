@@ -17,6 +17,9 @@
     </div>
     <ul id="history"></ul>
   </main>
+  <footer>
+    <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Termini di servizio</a></p>
+  </footer>
   <script>
     async function loadHistory(){
       const res = await fetch('/api/chat/history');
@@ -54,5 +57,6 @@
     });
     loadHistory();
   </script>
+  <script src="/cookie-banner.js"></script>
 </body>
 </html>

@@ -1,3 +1,21 @@
+/* styles.css */
 body{ font-family: Arial, sans-serif; padding: 2rem; }
 main{ max-width: 720px; margin: auto }
 input, button{ padding: .5rem; margin: .25rem }
+
+/* Cookie banner styles */
+.cookie-banner{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10000;
+}
+.cookie-banner .actions button{ margin-left: .5rem; }
+.cookie-banner a{ color: #aee; text-decoration: underline; }

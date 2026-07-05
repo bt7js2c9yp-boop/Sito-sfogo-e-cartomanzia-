@@ -15,6 +15,9 @@
     </form>
     <p id="msg"></p>
   </main>
+  <footer>
+    <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Termini di servizio</a></p>
+  </footer>
   <script>
     document.querySelector('#form').addEventListener('submit', async (e)=>{
       e.preventDefault();
@@ -25,5 +28,6 @@
       else document.getElementById('msg').innerText = j.error || 'Error';
     });
   </script>
+  <script src="/cookie-banner.js"></script>
 </body>
 </html>
