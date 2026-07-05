@@ -1,0 +1,23 @@
+{
+  "name": "sito-sfogo-cartomanzia",
+  "version": "1.0.0",
+  "description": "Sito Sfogo e Cartomanzia - Node + Express + Mongo + Stripe",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.4.0",
+    "stripe": "^12.0.0",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
