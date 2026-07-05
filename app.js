@@ -1,4 +1,3 @@
-// Entry point
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -22,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
-app.use(bodyParser.raw({type: 'application/json'})); // for stripe webhooks
+// Stripe webhook route uses raw body; ensure the general JSON parser runs before it for other routes
 
 // Sessions
 app.use(session({
@@ -37,10 +36,12 @@ app.use(session({
 const authRoutes = require('./routes/auth');
 const chatRoutes = require('./routes/chat');
 const paymentRoutes = require('./routes/payment');
+const gdprRoutes = require('./routes/gdpr');
 
 app.use('/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/payment', paymentRoutes);
+app.use('/api/gdpr', gdprRoutes);
 
 // Stripe webhook needs raw body; create a dedicated endpoint
 const paymentController = require('./controllers/paymentController');
